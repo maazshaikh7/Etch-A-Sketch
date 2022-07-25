@@ -1,0 +1,174 @@
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 98vw;
+    flex-direction: column;
+   
+    align-items: center;
+    font-family: 'Inconsolata', monospace;
+    overflow: auto;
+    background: linear-gradient(197deg, #d843fe, #f19915);
+    background: linear-gradient(222deg, #f48a00, #d46295);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+ }
+ @-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+ }
+ @keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+ }
+ 
+ #margin-top {
+   flex-grow: 1;
+ }
+ 
+ button:focus{
+    outline:0 !important;
+ }
+ 
+ .buttonscontainer {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0.8vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    text-align: center;
+    background-color: rgba(43, 196, 13, 0.2);
+    border: 2px solid rgb(173, 173, 173);
+    border-radius: 10px;
+    box-shadow: 22px 10px 2px -2px rgba(0,0,0,0.55);  
+ }
+ 
+ button {
+    margin: 0 2vh 0 2vh;
+    background-color: rgba(229, 68, 156, 50%);
+    border-radius: 5px;
+    transition: 2s;
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
+ }
+ 
+ #colortypebutton {
+    width: 50px;
+    transition: 2s;
+ }
+ 
+ #erasebutton.activebutton {
+    background-color: rgb(253, 253, 253);
+ }
+ 
+ #resetbutton:hover {
+    transition: 1s;
+    background-color: rgb(231, 67, 67);
+ }
+ 
+ #container {
+    margin: 25px auto 30px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30em;
+    width: 30em;
+    flex-grow: 0;
+ }
+ 
+ #blackboard {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border: 5px outset black;
+    width: 100%;
+    height: 100%;
+    grid-gap: 1px;
+    background-color: black;
+    overflow: hidden;
+    box-shadow: 22px 10px 2px -2px rgba(0,0,0,0.55);
+ }
+ 
+ .pixels {
+    background-color: white;
+    transition: 0.7s;
+ }
+ 
+ .slidercontainer {
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+ }
+ 
+ .smallerbigger {
+    margin: auto;
+    display: inline-block;
+ }
+ 
+ #slider[type=range] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+    margin: 0px 6px 6px 0px;
+    background-color: transparent;
+    -webkit-appearance: none;
+ }
+ 
+ #slider[type=range]:focus {
+    outline: none;
+ }
+ 
+ #slider[type=range]::-webkit-slider-runnable-track {
+    background: rgba(180, 172, 191, 0.2);
+    border: 0.2px solid rgba(121, 76, 109, 0.4);
+    border-radius: 25px;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+ }
+ 
+ #slider[type=range]::-webkit-slider-thumb {
+    margin-top: -6.2px;
+    width: 32px;
+    height: 17px;
+    background: rgba(49, 53, 43, 0.4);
+    border: 6.2px solid rgba(229, 68, 156, 0.5);
+    border-radius: 48px;
+    cursor: pointer;
+    -webkit-appearance: none;
+ }
+ 
+ #slider[type=range]:hover::-webkit-slider-runnable-track {
+    transition-property: all;
+    transition-duration: 2s;
+    background: #c9c3d1;
+ }
+ 
+ #slider[type=range]:hover::-ms-fill-lower {
+    background: rgba(180, 172, 191, 0.2);
+ }
+ 
+ #slider[type=range]:hover::-ms-fill-upper {
+    background: #c9c3d1;
+ }
+ 
+ .pixelsize {
+    display: block;
+    margin: auto auto auto auto;
+ }
+ 
+ footer {
+    display: block;
+    text-align: center;
+    flex-grow: 0;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: rgba(180, 172, 191, 0.2);
+ }
