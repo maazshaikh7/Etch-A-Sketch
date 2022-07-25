@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/af6f5656a5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="updateGrid()">
+    <div class="buttonscontainer">
+      <button id="colortypebutton">RGB</button>
+      <button id="erasebutton">ERASE</button>
+      <button id="resetbutton">RESET</button>
+    </div>
+    <div id="container">
+      <div id="blackboard"></div>
+    </div>
+    <div class="slidercontainer">
+      <label for="slider" id="sizeLabel" class="pixelsize"> 16</label>
+      <p class="smallerbigger">SMALLERS</p>
+      <input
+        type="range"
+        min="4"
+        max="60"
+        value="16"
+        id="slider"
+        list="tickmarks"
+      />
+      <datalist id="tickmarks">
+        <option value="0"></option>
+        <option value="10"></option>
+        <option value="20"></option>
+        <option value="30"></option>
+        <option value="40"></option>
+        <option value="50"></option>
+        <option value="60"></option>
+        <option value="70"></option>
+        <option value="80"></option>
+        <option value="90"></option>
+        <option value="100"></option>
+      </datalist>
+      <p class="smallerbigger">BIGGERS</p>
+      <p class="pixelsize">←PIXEL SIZE→</p>
+    </div>
+    <footer>
+      Made by: <a href="https://github.com/maazshaikh7">maazshaikh7</a>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
